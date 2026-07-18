@@ -28,6 +28,7 @@ sap.ui.define(
                 //Step 4: nav to view2
                 this.onNext(sPath);
             },
+            //dummy change
             onDelete: function(oEvent){
                 //MessageBox.confirm("This function is under contruction and you need to complete this 😂");
                 //Hint: Get All list items which are selected, loop at them, delete them one by one from list object
