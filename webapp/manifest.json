@@ -16,6 +16,13 @@
                 "settings": {
                     "odataVersion": "2.0"
                 }
+            },
+            "odata-v4-support": {
+                "uri": "/odata/v4/maintenance-order/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
             }
         }
     },
@@ -108,7 +115,21 @@
             }
         },
         "models": {
-            "":{
+            "" :{
+                "type":"sap.ui.model.odata.v4.ODataModel",
+                "dataSource": "odata-v4-support",
+                "settings": {
+                    "operationMode": "Server",
+                    "autoExpandSelect": false,
+                    "groupId": "$auto",
+                    "earlyRequests": true,
+                    "sharedRequests":true,
+                    "httpHeaders": {
+                        "X-Anubhav-Trainings": "demo"
+                    }
+                }
+            },
+            "v2":{
                 "type":"sap.ui.model.odata.v2.ODataModel",
                 "dataSource": "anubhavService"
             },

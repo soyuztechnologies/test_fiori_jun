@@ -11,3 +11,5 @@ server:
       - path: /sap
         url: http://122.162.240.164:8010
         destination: ANUBHAV
+      - path: /odata
+        url: https://sample-maintenance-srv-i760021.cfapps.eu12.hana.ondemand.com

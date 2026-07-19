@@ -9,7 +9,10 @@
         <SearchField id="idSearch" search="onSearch"></SearchField>
         <!-- absolute path - parent -->
         <List id="myList" growing="true" growingThreshold="10" items="{
-            path: '/ProductSet'
+            path: '/MaintenanceOrder',
+            parameters: {
+                $expand: 'operation'
+            }
         }" mode="SingleSelectMaster" selectionChange="onSelectItem">  
             <headerToolbar>
                 <Toolbar >
@@ -20,17 +23,16 @@
             <items>
                 <!-- To show a business object which comes with name, title, description, icon -->
                 <!-- relative path - @ child level -->
-                <ObjectListItem title="{PRODUCT_ID}" intro="{NAME} - {CATEGORY}"
-                                icon="sap-icon://product"
-                                number="{PRICE}" numberUnit="{CURRENCY_CODE}"
+                <ObjectListItem title="{number}" intro="{description}"
+                                icon="sap-icon://order"
+                                number="{status}" numberUnit="{ID}"
                 >
                     <!-- <firstStatus>
                         <ObjectStatus text="{path : 'availability', formatter: '.formatter.getStatus'}"
                                       state="{path : 'availability', formatter: '.formatter.getStatusColor'}" ></ObjectStatus>
                     </firstStatus> -->
                     <attributes>
-                        <ObjectAttribute title="Season" text="{SUPPLIER_ID}" ></ObjectAttribute>
-                        <ObjectAttribute title="Type" text="{SUPPLIER_NAME}" ></ObjectAttribute>
+                        <ObjectAttribute title="Work Center" text="{assignedWorkCenter}" ></ObjectAttribute>
                     </attributes>
                 </ObjectListItem>
             </items>

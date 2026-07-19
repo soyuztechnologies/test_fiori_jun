@@ -15,7 +15,7 @@ sap.ui.define(
             //Route matched handler function which triggers
             //The route can change manually, browser back-forward button, when user select fruit, user reload ui.
             herculis: function(oEvent){
-                debugger;
+                // debugger;
                 //here this - will never point to your controller class object
                 // so in order to use this as a object of controller we have to pass while calling it - attachMatched(this.herculis, this);
                 
@@ -25,7 +25,7 @@ sap.ui.define(
                 var sPath = "/" + sIndex;
                 //Step 3: bind element with view
                 this.getView().bindElement(sPath,{
-                    expand: 'To_Supplier'
+                    $expand: 'operation'
                 });
 
 

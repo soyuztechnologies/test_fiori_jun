@@ -5,8 +5,8 @@
     <Page title="Page 2" showNavButton="true" navButtonPress="onBack">
         <!-- <Button text="Back" icon="sap-icon://arrow-left" press="onBack"></Button> -->
 
-        <ObjectHeader intro="{DESCRIPTION}" title="{NAME}" icon="sap-icon://product"
-                     number="{PRICE}" numberUnit="{CURRENCY_CODE}"></ObjectHeader>
+        <ObjectHeader intro="{description}" title="{number}" icon="sap-icon://order"
+                     number="{status}" numberUnit="{ID}"></ObjectHeader>
 
 
         <!-- Tab Strip -->
