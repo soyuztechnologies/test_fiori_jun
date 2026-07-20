@@ -20,7 +20,7 @@
     <f:SimpleForm title="First Operation Details(Which is OPEN)">
         <f:content>
             <Label text="ID and Code"></Label>
-            <Text text="{operation/0/ID} {operation/0/CODE}"></Text>
+            <Text text="{operation/0/ID} {operation/0/code}"></Text>
             <Label text="Status"></Label>
             <Text text="{operation/0/status}"></Text>
             <Label text="Validity"></Label>

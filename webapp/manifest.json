@@ -10,13 +10,6 @@
             "version" : "1.0.0"
         },
         "dataSources":{
-            "anubhavService":{
-                "uri": "/sap/opu/odata/sap/ZODATA_JUN_SRV/",
-                "type": "OData",
-                "settings": {
-                    "odataVersion": "2.0"
-                }
-            },
             "odata-v4-support": {
                 "uri": "/odata/v4/maintenance-order/",
                 "type": "OData",
@@ -128,10 +121,6 @@
                         "X-Anubhav-Trainings": "demo"
                     }
                 }
-            },
-            "v2":{
-                "type":"sap.ui.model.odata.v2.ODataModel",
-                "dataSource": "anubhavService"
             },
             "local": {
                 "type": "sap.ui.model.json.JSONModel",
