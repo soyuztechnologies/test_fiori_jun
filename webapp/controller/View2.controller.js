@@ -25,7 +25,11 @@ sap.ui.define(
                 var sPath = "/" + sIndex;
                 //Step 3: bind element with view
                 this.getView().bindElement(sPath,{
-                    $expand: 'operation'
+                    $expand: {
+                        'operation' : {
+                            $filter : 'status eq \'OPEN\''
+                        }
+                    }
                 });
 
 

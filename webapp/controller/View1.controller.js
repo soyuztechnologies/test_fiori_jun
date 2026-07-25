@@ -15,6 +15,9 @@ sap.ui.define(
                 //this.getOwnerComponent().getManifest()
                 //this.getOwnerComponent().getModel()
             },  
+            onOps: function(){
+                this.getRouter().navTo("batman");
+            },
             onSelectItem: function(oEvent){
                 //Step 1: get the path of the element selected by user
                 var sPath = oEvent.getParameter("listItem").getBindingContextPath();

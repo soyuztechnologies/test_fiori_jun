@@ -78,6 +78,11 @@
                     "pattern": "devendra",
                     "name": "wonderwomen",
                     "target": ["donald", "putin"]
+                },
+                {
+                    "pattern": "pratap",
+                    "name": "batman",
+                    "target": ["donald", "macron"]
                 }
             ],
             "targets": {
@@ -102,6 +107,12 @@
                 "putin": {
                     "viewName":"Add",
                     "viewId": "idAdd",
+                    "controlAggregation": "detailPages",
+                    "clearControlAggregation": true
+                },
+                "macron": {
+                    "viewName":"Ops",
+                    "viewId": "idOps",
                     "controlAggregation": "detailPages",
                     "clearControlAggregation": true
                 }

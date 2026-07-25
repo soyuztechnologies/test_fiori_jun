@@ -43,6 +43,8 @@
                 <ToolbarSpacer ></ToolbarSpacer>
                 <Button icon="sap-icon://filter" tooltip="Show Orders"
                         press="onShowOrders"></Button>
+                <Button icon="sap-icon://machine" tooltip="Load Operations"
+                        press="onOps"></Button>
                 <Button icon="sap-icon://add" tooltip="Manage Product"
                         press="onAdd"></Button>
             </Toolbar>

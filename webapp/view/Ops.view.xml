@@ -1,0 +1,71 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+             xmlns:core="sap.ui.core"
+             controllerName="ey.ap.acc.controller.Ops">
+
+    <Page title="Operations overview" showNavButton="true" navButtonPress="onBack">
+        <!-- <Button text="Back" icon="sap-icon://arrow-left" press="onBack"></Button> -->
+
+        <!-- Tab Strip -->
+        <IconTabBar select="onTabSelect">
+            <items>
+                <!-- Tab1 -->
+                <IconTabFilter text="All" 
+                               count="{/Operation/$count}"
+                               icon="sap-icon://accelerated" key="all">
+                </IconTabFilter>
+                <!-- Tab2 -->
+                <IconTabFilter text="Less Quantity" 
+                            count="{
+                                path: '/Operation/$count?$filter=component/any(c:c/quantity%20lt%201.5)',
+                                targetType: 'any'
+                            }"
+                            icon="sap-icon://travel-expense-report" key="less">
+                </IconTabFilter>
+                <!-- Tab3 -->
+                <IconTabFilter text="Higher Quantity" 
+                                count="{
+                                    path: '/Operation/$count?$filter=component/all(c:c/quantity%20ge%202)',
+                                    targetType: 'any'
+                                }"
+                                icon="sap-icon://collections-insight" key="more">
+                </IconTabFilter>
+            </items>
+            <content>
+                <Table id="mainOps" items="{
+                                path: '/Operation'
+                }">
+                    <columns>
+                        <Column >
+                            <header><Text text="ID/code"></Text></header>
+                        </Column>
+                        <Column >
+                            <header><Text text="Description"></Text></header>
+                        </Column>
+                        <Column >
+                            <header><Text text="Status"></Text></header>
+                        </Column>
+                        <Column >
+                            <header><Text text="Duration"></Text></header>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem >
+                            <Text text="{ID} - {code}"></Text>
+                            <Text text="{description}"></Text>
+                            <Text text="{status}"></Text>
+                            <Text text="{durationTime} {durationUnit}"></Text>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            
+            </content>
+        </IconTabBar>
+
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer ></ToolbarSpacer>
+            </Toolbar>
+        </footer>
+    </Page>
+
+</mvc:View>
