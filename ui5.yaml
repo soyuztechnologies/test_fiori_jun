@@ -2,6 +2,10 @@ specVersion: "4.0"
 metadata:
   name: fiorilikeapp
 type: application
+builder:
+  customTasks:
+    - name: ui5-tools-transpile-task
+      afterTask: replaceVersion
 server:
   customMiddleware:
   - name: fiori-tools-proxy
@@ -11,3 +15,5 @@ server:
       - path: /sap
         url: http://122.162.240.164:8010
         destination: ANUBHAV
+  - name: ui5-tooling-transpile-middleware
+    afterMiddleware: compression

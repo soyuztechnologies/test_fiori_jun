@@ -14,7 +14,10 @@
     "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
   },
   "dependencies": {
-    "@sap/ux-ui5-tooling": "^1.28.0"
+    "@openui5/ts-types-esm": "^1.148.0",
+    "@sap/ux-ui5-tooling": "^1.28.0",
+    "typescript": "^7.0.2",
+    "ui5-tooling-transpile": "^3.12.0"
   },
   "devDependencies": {
     "rimraf": "^5.0.5",
