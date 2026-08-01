@@ -18,7 +18,7 @@
         "ey/ap/acc/*": ["./webapp/*"]
     },
     //for incremental conversion we keep it true
-    "allowJs": true,    
+    "allowJs": false,    
 
     // For nodejs:
     // "lib": ["esnext"],
